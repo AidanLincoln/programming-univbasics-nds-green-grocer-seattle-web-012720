@@ -92,4 +92,8 @@ def checkout(cart, coupons)
   while i < consolidated_and_discounted.length do
     total += consolidated_and_discounted[i][:price] * consolidated_and_discounted[i][:count]
   end
+  if total >= 100 
+    total = total * 0.9
+  end  
+  total
 end
